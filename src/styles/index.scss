@@ -1,0 +1,40 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+/* 
+
+    You can write your own styles here...
+    
+    
+    ...Or you can use the import command to include 
+    other sylesheets into your bunde as well, e.j:
+    
+    import 'relative/path/to/stylesheet.scss';
+
+*/
+
+.card-columns {
+  @include media-breakpoint-only(xs) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 3;
+  }
+}
+
+.textNav {
+  @include media-breakpoint-only(xs) {
+    font-size: 0.75em;
+  }
+  @include media-breakpoint-only(sm) {
+    font-size: 0.75em;
+  }
+  @include media-breakpoint-only(md) {
+    font-size: 1.25em;
+  }
+  @include media-breakpoint-only(lg) {
+    font-size: 1.5em;
+  }
+  @include media-breakpoint-only(xl) {
+    font-size: 1.5em;
+  }
+}
