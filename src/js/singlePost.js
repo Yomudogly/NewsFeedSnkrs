@@ -28,13 +28,13 @@ export const SinglePost = props => {
 			<hr className="mb-3 mt-0" />
 			<h2
 				dangerouslySetInnerHTML={{
-					__html: store.posts[props.match.params.id].title
+					__html: store.singlePost[props.match.params.id].title
 				}}></h2>
 			<LazyLoad>
 				<div
 					className="container wp-post"
 					dangerouslySetInnerHTML={{
-						__html: store.posts[props.match.params.id].content
+						__html: store.singlePost[props.match.params.id].content
 					}}></div>
 			</LazyLoad>
 			<hr className="mb-1 mt-2" />

@@ -1,9 +1,11 @@
-import React from "react";
-import { MemoryRouter, Route, Redirect, Switch } from "react-router-dom";
+import React, { useContext } from "react";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 
 // import ScrollToTop from "./component/scrollToTop";
 
 import injectContext from "./store/appContext";
+
+import ScrollToTop from "./component/scrollToTop";
 
 import { Posts } from "./posts";
 import { SinglePost } from "./singlePost";
@@ -15,22 +17,21 @@ export const Layout = () => {
 
 	return (
 		<div>
-			<MemoryRouter>
-				<div>
-					<Switch>
-						<Route exact path="/" component={Posts} />
+			<BrowserRouter>
+				<ScrollToTop />
+				<Switch>
+					<Route exact path="/" component={Posts} />
 
-						<Route exact path="/:id" component={SinglePost} />
-						<Route
-							render={() =>
-								<h1 className="notfound">Not found!</h1> ? (
-									<Redirect to="/" />
-								) : null
-							}
-						/>
-					</Switch>
-				</div>
-			</MemoryRouter>
+					<Route exact path="/:id" component={SinglePost} />
+					<Route
+						render={() =>
+							<h1 className="notfound">Not found!</h1> ? (
+								<Redirect to="/" />
+							) : null
+						}
+					/>
+				</Switch>
+			</BrowserRouter>
 		</div>
 	);
 };

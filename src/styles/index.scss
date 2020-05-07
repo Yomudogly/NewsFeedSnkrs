@@ -44,6 +44,16 @@ figure img {
   height: auto;
 }
 
+iframe {
+  max-width: 100%;
+  @include media-breakpoint-only(xs) {
+    height: auto;
+  }
+  @include media-breakpoint-only(sm) {
+    height: auto;
+  }
+}
+
 .wp-post {
   width: 100%;
   font-size: 1.1rem;
