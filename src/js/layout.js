@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import React from "react";
+import { MemoryRouter, Route, Redirect, Switch } from "react-router-dom";
 
 // import ScrollToTop from "./component/scrollToTop";
 
@@ -17,21 +17,21 @@ export const Layout = () => {
 
 	return (
 		<div>
-			<BrowserRouter>
+			<MemoryRouter>
 				<ScrollToTop />
 				<Switch>
 					<Route exact path="/" component={Posts} />
-
+					<Route exact path="/index.html" component={Posts} />
 					<Route exact path="/:id" component={SinglePost} />
 					<Route
 						render={() =>
 							<h1 className="notfound">Not found!</h1> ? (
-								<Redirect to="/" />
+								<Redirect to="/index.html" />
 							) : null
 						}
 					/>
 				</Switch>
-			</BrowserRouter>
+			</MemoryRouter>
 		</div>
 	);
 };
