@@ -44,6 +44,15 @@ export const SinglePost = props => {
 						© All rights reserved || SnkrsDen
 					</a>
 				</span>
+				<span className="navbar-text">
+					<a href="https://snkrsden.com/terms-conditions.html">
+						Terms & Conditions
+					</a>{" "}
+					||{" "}
+					<a href="https://snkrsden.com/privacy-policy.html">
+						Privacy Policy
+					</a>
+				</span>
 			</nav>
 		</div>
 	);
